@@ -1,0 +1,113 @@
+Name: Alarms
+Type: FolderType
+Children:
+- Name: ExclusiveRateOfChangeAlarm1
+  Type: ExclusiveRateOfChangeAlarmController
+  Children:
+  - Name: PollingTime
+    Type: BaseDataVariableType
+    DataType: Duration
+    Value: "0:00:00:8.0000000"
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/Variable1"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=12;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=12;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=12;i=83
+    Direction: Forward
+  - Name: HighHighLimit
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 4.0
+  - Name: HighLimit
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 2.0
+  - Name: LowLimit
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: -1.0
+  - Name: LowLowLimit
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: -2.0
+  - Name: Severity
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 10
+- Name: NonExclusiveRateOfChangeAlarm1
+  Type: NonExclusiveRateOfChangeAlarmController
+  Children:
+  - Name: PollingTime
+    Type: BaseDataVariableType
+    DataType: Duration
+    Value: "0:00:00:8.0000000"
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/Variable1"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=12;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=12;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=12;i=83
+    Direction: Forward
+  - Name: HighHighLimit
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 4.0
+  - Name: HighLimit
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 2.0
+  - Name: LowLimit
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: -1.0
+  - Name: LowLowLimit
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: -2.0
+  - Name: Severity
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 20
